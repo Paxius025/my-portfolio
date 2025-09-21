@@ -1,69 +1,118 @@
-# React + TypeScript + Vite
+# My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio built with React (Vite) and TailwindCSS. Single-page layout with four primary sections: Landing, About, Projects, and Contact. Contact form uses EmailJS to send messages.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+Live demo: https://your-vercel-deployment.vercel.app
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Built with React + Vite for fast dev and builds
+- TailwindCSS utility-first styling
+- Responsive: Desktop / Tablet / Mobile
+- Component-based structure (each section is a component)
+- Optional dark mode toggle
+- Project showcase with thumbnails and links
+- Contact form integrated with EmailJS (Name, Email, Message, success/error feedback)
+- Social links: GitHub, LinkedIn, Twitter
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Tech Stack
+
+- React
+- Vite
+- TailwindCSS
+- EmailJS
+- React Icons
+
+---
+
+## Project Structure
+```bash
+my-portfolio/
+├─ src/
+│  ├─ components/
+│  │  ├─ Navbar.tsx
+│  │  ├─ Landing.tsx
+│  │  ├─ About.tsx
+│  │  ├─ Projects.tsx
+│  │  ├─ ProjectCard.tsx
+│  │  └─ Contact.tsx
+│  ├─ data/
+│  │  └─ projects.ts
+│  ├─ assets/      # images (profile, thumbnails)
+│  ├─ App.tsx
+│  ├─ main.tsx
+│  └─ index.css
+├─ public/         # public assets (images, favicon)
+├─ package.json
+├─ vite.config.ts
+└─ tailwind.config.cjs
+```
+---
+
+## Installation
+
+1. Clone the repo and install dependencies:
+```bash
+git clone https://github.com/yourusername/my-portfolio.git
+cd paxius-portfolio
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Create a .env file in the project root with EmailJS credentials (Vite requires VITE_ prefix):
+```env
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
 ```
+
+3. Run the dev server:
+```bash
+npm run dev
+```
+Open http://localhost:5173
+
+---
+
+## Build & Deploy (Vercel)
+
+1. Build for production:
+```bash
+npm run build
+```
+
+2. Deploy to Vercel:
+- Push repo to GitHub.
+- Import project in Vercel.
+- Set Environment Variables (same VITE_ keys).
+- Build Command: npm run build
+- Output Directory: dist
+
+---
+
+## Customization
+
+- Profile & project images: update files in /public and src/assets
+- Projects list: edit src/data/projects.ts
+- Social links: edit Contact.tsx
+- Tailwind colors/typography: update tailwind.config.cjs and component classes
+- Dark mode: toggle via Navbar component state
+
+---
+
+## License
+
+MIT License © [Paxius]
+
+--- 
+
+Notes:
+- Keep EmailJS keys secret; do not commit .env to git.
+- Replace demo link and GitHub repo URL with your own before publishing.

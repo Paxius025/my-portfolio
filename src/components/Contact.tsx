@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FiLinkedin, FiTwitter, FiGithub } from "react-icons/fi";
+import { FiLinkedin, FiGithub } from "react-icons/fi";
 import Alert from "@mui/material/Alert";
 
 export default function Contact() {
@@ -46,12 +46,12 @@ export default function Contact() {
           <div className="mb-6 md:mb-0">
             <h2 className="text-2xl font-bold">Get in touch</h2>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-              ติดต่อผ่านแบบฟอร์มหรือโซเชียล
+              contact me via email or follow me on social media.
             </p>
 
             <div className="mt-4 flex gap-4">
               <a
-                href="https://github.com/yourname"
+                href="https://github.com/Paxius025"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded border"
@@ -59,21 +59,21 @@ export default function Contact() {
                 <FiGithub />
               </a>
               <a
-                href="https://linkedin.com/in/yourname"
+                href="https://www.linkedin.com/in/pantong-sanonok-41b152308/"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded border"
               >
                 <FiLinkedin />
               </a>
-              <a
+              {/* <a
                 href="https://twitter.com/yourname"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded border"
               >
                 <FiTwitter />
-              </a>
+              </a> */}
             </div>
           </div>
 

@@ -8,14 +8,10 @@ export default function Landing() {
           Pantong Sanonok
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-300">
-          Welcome to my portfolio
-        </p>
-
         <blockquote className="mt-8 text-xl md:text-2xl font-medium text-slate-700 dark:text-slate-200">
           「有志者事竟成」  
           <span className="block mt-2 text-base md:text-lg text-slate-500 dark:text-slate-400">
-            – Where there's a will, there's a way.
+            Where there's a will, there's a way.
           </span>
         </blockquote>
 

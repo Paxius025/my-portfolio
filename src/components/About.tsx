@@ -1,4 +1,7 @@
+import SkillsCard from "./cards/SkillsCard";
+
 import myProfileImage from "../assets/images/Nisit_pantong.jpeg";
+
 export default function About() {
   return (
     <div className="container mx-auto px-6">
@@ -32,30 +35,12 @@ export default function About() {
             </p>
           </div>
           <div className="mt-4 grid sm:grid-cols-2 gap-2">
-            <div className="mb-2">
-              <h4 className="font-semibold">Languages</h4>
-              <ul className="mt-2 text-sm">
-                <li>TypeScript, JavaScript, HTML, CSS</li>
-              </ul>
-            </div>
-            <div className="mb-2">
-              <h4 className="font-semibold">Frameworks & Libraries</h4>
-              <ul className="mt-2 text-sm">
-                <li>Node.js, Express.js, Prisma ORM, React.js, Tailwindcss</li>
-              </ul>
-            </div>
-            <div className="mb-2">
-              <h4 className="font-semibold">Database</h4>
-              <ul className="mt-2 text-sm">
-                <li>PostgreSQL, MySQL, SQLite</li>
-              </ul>
-            </div>
-            <div className="mb-2">
-              <h4 className="font-semibold">Tools & Platforms</h4>
-              <ul className="mt-2 text-sm">
-                <li>Docker, Git, Visual Studio Code, Vercel</li>
-              </ul>
-            </div>
+            <SkillsCard category="Soft Skills" skills={["Team Collaboration", "Adaptability", "Presentation"]} />
+            <SkillsCard category="Languages" skills={["Thai (Native)", "English (Intermediate)"]} />
+            <SkillsCard category="Programming Languages" skills={["TypeScript", "JavaScript", "HTML", "CSS"]} />
+            <SkillsCard category="Frameworks & Libraries" skills={["Node.js", "Express.js", "Prisma ORM", "React.js", "Tailwindcss"]} />
+            <SkillsCard category="Databases" skills={["PostgreSQL", "MySQL", "SQLite"]} />
+            <SkillsCard category="Tools & Platforms" skills={["Git", "Docker", "Postman", "Vercel", "Railway"]} />
           </div>
           <div>
             <h4 className="font-semibold">Interests</h4>
