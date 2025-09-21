@@ -1,12 +1,13 @@
+import myProfileImage from "../assets/images/Nisit_pantong.jpeg";
 export default function About() {
   return (
     <div className="container mx-auto px-6">
-      <div className="grid md:grid-cols-2 gap-8 items-center">
+      <div className="grid md:grid-cols-2 gap-2 items-center">
         <div className="flex justify-center md:justify-start">
           <img
-            src="/profile.jpg"
+            src={myProfileImage}
             alt="Profile"
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-lg"
+            className="w-64 h-64 md:w-96 md:h-96 rounded-full object-cover shadow-lg"
           />
         </div>
         <div>
@@ -23,10 +24,11 @@ export default function About() {
           <div className="mb-6">
             <h2 className="text-2xl font-bold">Education</h2>
 
-            <p className="mt-4 text-slate-700 dark:text-slate-300">
-              Education Bachelor of Engineering in Computer Engineering Expected
-              Graduation: 2026 Kasetsart University, Chalermphrakiat Sakon
-              Nakhon Campus (Thailand) Current GPA: 3.64
+            <p className="mt-2 text-slate-700 dark:text-slate-300">
+              Kasetsart University, Chalermphrakiat Sakon Nakhon Campus
+              (Thailand) <br />
+              Education Bachelor of Engineering in Computer Engineering <br />
+              Current GPA: 3.64 (Expected Graduation: 2026)
             </p>
           </div>
           <div className="mt-4 grid sm:grid-cols-2 gap-2">
@@ -39,7 +41,7 @@ export default function About() {
             <div className="mb-2">
               <h4 className="font-semibold">Frameworks & Libraries</h4>
               <ul className="mt-2 text-sm">
-                <li>Node.js, Express.js, Prisma ORM, React.js</li>
+                <li>Node.js, Express.js, Prisma ORM, React.js, Tailwindcss</li>
               </ul>
             </div>
             <div className="mb-2">
@@ -55,15 +57,15 @@ export default function About() {
               </ul>
             </div>
           </div>
-            <div>
-              <h4 className="font-semibold">Interests</h4>
-              <ul className="mt-2 text-sm">
-                <li>Backend Development</li>
-                <li>API Design</li>
-              </ul>
-            </div>
-        </div>
+          <div>
+            <h4 className="font-semibold">Interests</h4>
+            <ul className="mt-2 text-sm">
+              <li>Backend Development</li>
+              <li>API Design</li>
+            </ul>
           </div>
         </div>
+      </div>
+    </div>
   );
 }
