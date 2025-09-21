@@ -1,6 +1,6 @@
 export type ProjectType = {
     id: string;
-    category: 'Personal' | 'Awards' | 'Certifications' | 'Activities';
+    category: 'Personal' | 'Awards' | 'Certifications' | 'Activities' | 'Research';
     title: string;
     description: string;
     link?: string;
@@ -10,23 +10,45 @@ export type ProjectType = {
 export const projects: ProjectType[] = [
     {
         id: '1',
-        category: 'Personal',
-        title: 'Portfolio Website',
-        description: 'A personal portfolio website to showcase my projects and skills.',
-        link: 'https://www.example.com/portfolio',
-        image: 'https://www.example.com/images/portfolio.png'
+        category: 'Research',
+        title: 'Enhancing Attitudes and Engagement in First-Year Computer Engineering Students',
+        description: 'Contributed to the development of IoT sensor modules.',
+        link: 'https://onlinelibrary.wiley.com/doi/10.1002/cae.70020?af=R',
     },
     {
         id: '2',
-        category: 'Awards',
-        title: 'Best Developer Award',
-        description: 'Received the Best Developer Award for outstanding performance in 2023.',
+        category: 'Activities',
+        title: 'President of Young Innovator Club',
+        description: 'Led a team of young innovators, contributing to the development of creative solutions for local community issues during the 2025 academic year.',
     },
     {
         id: '3',
+        category: 'Awards',
+        title: 'Thailand New Gen Inventors Award',
+        description: 'Awarded a Silver Medal at the Thailand New Gen Inventors Award, Academic Year 2025.',
+    },
+    {
+        id: '4',
+        category: 'Awards',
+        title: 'Outstanding Student Award',
+        description: 'Received the Outstanding Student Award in Creativity and Innovation, Academic Year 2025.',
+    },
+    {
+        id: '5',
+        category: 'Awards',
+        title: 'Outstanding Academic Achievement Award',
+        description: 'Awarded for outstanding academic achievement for the academic years 2023-2025.',
+    },
+    {
+        id: '6',
         category: 'Certifications',
-        title: 'Certified React Developer',
-        description: 'Completed the React Developer Certification from XYZ Institute.',
-        link: 'https://www.example.com/certification'
-    }
+        title: 'KU Startup Bootcamp for Entrepreneurs',
+        description: 'Completed the KU Startup Bootcamp for Entrepreneurs in 2024, focusing on developing entrepreneurial skills.',
+    },
+    {
+        id: '7',
+        category: 'Certifications',
+        title: 'Leadership Development Program X',
+        description: 'Completed the Leadership Development Program X with CP All Public Company Limited in 2025.',
+    }, 
 ]

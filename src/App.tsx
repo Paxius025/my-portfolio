@@ -2,6 +2,7 @@ import './App.css'
 import About from './components/About.tsx'
 import Landing from './components/Landing.tsx'
 import Navbar from './components/Navbar.tsx'
+import Projects from './components/Projects.tsx'
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
 
         <section id="about" className="py-16 border-t border-slate-200 dark:border-slate-700">
           <About />
+        </section>
+
+        <section id="projects" className="py-16 border-t border-slate-200 dark:border-slate-700">
+          <Projects />
         </section>
       </main>
     </div>
