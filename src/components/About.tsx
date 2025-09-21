@@ -1,6 +1,6 @@
 import SkillsCard from "./cards/SkillsCard";
 
-import myProfileImage from "../assets/images/Nisit_pantong.jpeg";
+// import myProfileImage from "../assets/images/Nisit_pantong.jpeg";
 
 export default function About() {
   return (
@@ -8,7 +8,7 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-2 items-center">
         <div className="flex justify-center md:justify-start">
           <img
-            src={myProfileImage}
+            src='/Nisit_pantong.jpeg'
             alt="Profile"
             className="w-64 h-64 md:w-96 md:h-96 rounded-full object-cover shadow-lg"
           />
