@@ -6,7 +6,7 @@ A modern, responsive portfolio built with React (Vite) and TailwindCSS. Single-p
 
 ## Demo
 
-Live demo: https://your-vercel-deployment.vercel.app
+Live demo: https://my-portfolio-indol-kappa-44.vercel.app/
 
 ---
 
