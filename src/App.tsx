@@ -3,7 +3,7 @@ import About from './components/About.tsx'
 import Contact from './components/Contact.tsx'
 import Landing from './components/Landing.tsx'
 import Navbar from './components/Navbar.tsx'
-import Projects from './components/Projects.tsx'
+import HighlightsContainer from './components/Highlights.tsx'
 
 function App() {
 
@@ -19,8 +19,8 @@ function App() {
           <About />
         </section>
 
-        <section id="projects" className="py-16 border-t border-slate-200 dark:border-slate-700">
-          <Projects />
+        <section id="highlights" className="py-16 border-t border-slate-200 dark:border-slate-700">
+          <HighlightsContainer />
         </section>
 
         <section id="contact" className="py-16 border-t border-slate-200 dark:border-slate-700">

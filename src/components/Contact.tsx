@@ -7,6 +7,7 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [title, setTitle] = useState("");
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
@@ -17,9 +18,10 @@ export default function Contact() {
 
     try {
       const templeteParams = {
-        from_name: name,
-        from_email: email,
+        name: name,
+        email: email,
         message: message,
+        title: title,
       };
 
       await emailjs.send(
@@ -33,6 +35,7 @@ export default function Contact() {
       setName("");
       setEmail("");
       setMessage("");
+      setTitle("");
     } catch (error) {
       console.error("Failed to send message:", error);
       setStatus("error");
@@ -66,14 +69,6 @@ export default function Contact() {
               >
                 <FiLinkedin />
               </a>
-              {/* <a
-                href="https://twitter.com/yourname"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2 rounded border"
-              >
-                <FiTwitter />
-              </a> */}
             </div>
           </div>
 
@@ -94,20 +89,15 @@ export default function Contact() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              {status === "success" && (
-                <Alert severity="success">
-                  The Email was sent successfully!
-                </Alert>
-              )}
-              {status === "error" && (
-                <Alert severity="error">
-                  There was an error sending the Email.
-                </Alert>
-              )}
-              {status === "sending" && (
-                <Alert severity="info">Sending...</Alert>
-              )}
             </div>
+            <textarea
+              className="mt-3 border rounded px-3 py-2 w-full bg-white dark:bg-slate-900"
+              placeholder="message"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              rows={1}
+              required
+            />
             <textarea
               className="mt-3 border rounded px-3 py-2 w-full bg-white dark:bg-slate-900"
               placeholder="message"
@@ -124,17 +114,19 @@ export default function Contact() {
               >
                 {status === "sending" ? "Sending..." : "Send"}
               </button>
-
-              <div aria-live="polite" className="text-sm">
-                {status === "success" && (
-                  <span className="text-green-600">ส่งเรียบร้อย</span>
-                )}
-                {status === "error" && (
-                  <span className="text-red-600">
-                    เกิดข้อผิดพลาด, ลองอีกครั้ง
-                  </span>
-                )}
-              </div>
+              {status === "success" && (
+                <Alert severity="success">
+                  The Email was sent successfully!
+                </Alert>
+              )}
+              {status === "error" && (
+                <Alert severity="error">
+                  There was an error sending the Email.
+                </Alert>
+              )}
+              {status === "sending" && (
+                <Alert severity="info">Sending...</Alert>
+              )}
             </div>
           </form>
         </div>
