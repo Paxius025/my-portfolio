@@ -49,7 +49,7 @@ export default function Contact() {
           <div className="mb-6 md:mb-0">
             <h2 className="text-2xl font-bold">Get in touch</h2>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-              contact me via email or follow me on social media.
+              Contact me via email or follow me on social media.
             </p>
 
             <div className="mt-4 flex gap-4">
