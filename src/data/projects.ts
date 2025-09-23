@@ -1,6 +1,6 @@
 export type ProjectType = {
     id: string;
-    category: 'Personal' | 'Awards' | 'Certifications' | 'Activities' | 'Research';
+    category: 'Personal' | 'Awards & Certifications' | 'Activities' | 'Research';
     title: string;
     description: string;
     link?: string;
@@ -23,31 +23,31 @@ export const projects: ProjectType[] = [
     },
     {
         id: '3',
-        category: 'Awards',
+        category: 'Awards & Certifications',
         title: 'Thailand New Gen Inventors Award',
         description: 'Awarded a Silver Medal at the Thailand New Gen Inventors Award, Academic Year 2025.',
     },
     {
         id: '4',
-        category: 'Awards',
+        category: 'Awards & Certifications',
         title: 'Outstanding Student Award',
-        description: 'Received the Outstanding Student Award in Creativity and Innovation, Academic Year 2025.',
+        description: 'Received the Outstanding Student certificate in Creativity and Innovation, Academic Year 2025.',
     },
     {
         id: '5',
-        category: 'Awards',
+        category: 'Awards & Certifications',
         title: 'Outstanding Academic Achievement Award',
-        description: 'Awarded for outstanding academic achievement for the academic years 2023-2025.',
+        description: 'Certificate for outstanding academic achievement for the academic years 2023-2025.',
     },
     {
         id: '6',
-        category: 'Certifications',
+        category: 'Activities',
         title: 'KU Startup Bootcamp for Entrepreneurs',
         description: 'Completed the KU Startup Bootcamp for Entrepreneurs in 2024, focusing on developing entrepreneurial skills.',
     },
     {
         id: '7',
-        category: 'Certifications',
+        category: 'Activities',
         title: 'Leadership Development Program X',
         description: 'Completed the Leadership Development Program X with CP All Public Company Limited in 2025.',
     }, 

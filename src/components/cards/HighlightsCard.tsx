@@ -1,6 +1,6 @@
-import type { ProjectType } from "../data/projects";
+import type { ProjectType } from "../../data/projects";
 
-export default function ProjectCard({ project }: { project: ProjectType }) {
+export default function HighlightCard({ project }: { project: ProjectType }) {
   return (
     <div className="bg-white dark:bg-slate-900 border rounded-lg p-4 shadow-sm">
       {project.image && (
